@@ -10,9 +10,11 @@ CONFIG += c++11
 
 SOURCES += \
     main.cpp \
+    obrero.cpp \
     salarios.cpp
 
 HEADERS += \
+    obrero.h \
     salarios.h
 
 FORMS += \
