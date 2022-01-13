@@ -97,7 +97,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QRadioButton" name="InNocturna">
+           <widget class="QRadioButton" name="inNocturna">
             <property name="text">
              <string>Nocturna</string>
             </property>
