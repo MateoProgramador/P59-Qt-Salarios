@@ -161,8 +161,12 @@ void Salarios::on_actionAcerca_de_salarios_triggered()
 {
     //Crear un objeto de la ventana que queremos invocar
     acerca *dialogo = new acerca(this);
+    //Enviar parametro a la ventana
+    dialogo->setVersion(VERSION);
     //Mostrar la ventana de dialogo
-    dialogo->show();
+    dialogo->exec();
+    //Obtener datos del dialogo
+    //dialogo->valor();
 
 }
 

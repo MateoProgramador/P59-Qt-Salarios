@@ -15,7 +15,7 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QLabel" name="label">
+    <widget class="QLabel" name="lblNombre">
      <property name="font">
       <font>
        <pointsize>20</pointsize>
@@ -29,7 +29,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="label_2">
+    <widget class="QLabel" name="lblDerechos">
      <property name="text">
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Copyright 2022-2022&lt;span style=&quot; font-weight:600;&quot;&gt; Mateo Ramirez&lt;/span&gt;. &lt;/p&gt;&lt;p&gt;Universidad Politecnica Salesiana.All rights reserved. &lt;/p&gt;&lt;p&gt;Codigo disponible en:&lt;a href=&quot;https://github.com/MateoProgramador/P59-Qt-Salarios.git&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Github&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
@@ -39,7 +39,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="label_3">
+    <widget class="QLabel" name="lbFreepik">
      <property name="text">
       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://www.flaticon.es/iconos-gratis/dinero&quot;&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Icons made&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;https://www.flaticon.es/iconos-gratis/dinero&quot;&gt;&lt;span style=&quot; color:#0000ff;&quot;/&gt;&lt;/a&gt;&lt;a href=&quot;https://www.flaticon.es/iconos-gratis/dinero&quot;&gt;&lt;span style=&quot; color:#000000;&quot;&gt;by&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;https://www.flaticon.es/iconos-gratis/dinero&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt; Freepik &lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;https://www.flaticon.es/iconos-gratis/dinero&quot;&gt;&lt;span style=&quot; color:#000000;&quot;&gt;from&lt;/span&gt;&lt;/a&gt;&lt;a href=&quot;https://www.flaticon.es/iconos-gratis/dinero&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt; www.flaticon.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
