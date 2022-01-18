@@ -4,19 +4,19 @@
 #include <QDialog>
 
 namespace Ui {
-class Acerca;
+class acerca;
 }
 
-class Acerca : public QDialog
+class acerca : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit Acerca(QWidget *parent = nullptr);
-    ~Acerca();
+    explicit acerca(QWidget *parent = nullptr);
+    ~acerca();
 
 private:
-    Ui::Acerca *ui;
+    Ui::acerca *ui;
 };
 
 #endif // ACERCA_H

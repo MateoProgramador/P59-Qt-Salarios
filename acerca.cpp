@@ -1,14 +1,14 @@
 #include "acerca.h"
 #include "ui_acerca.h"
 
-Acerca::Acerca(QWidget *parent) :
+acerca::acerca(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::Acerca)
+    ui(new Ui::acerca)
 {
     ui->setupUi(this);
 }
 
-Acerca::~Acerca()
+acerca::~acerca()
 {
     delete ui;
 }
