@@ -156,3 +156,13 @@ void Salarios::on_actionAbrir_triggered()
 {
     abrir();
 }
+
+void Salarios::on_actionAcerca_de_salarios_triggered()
+{
+    //Crear un objeto de la ventana que queremos invocar
+    acerca *dialogo = new acerca(this);
+    //Mostrar la ventana de dialogo
+    dialogo->show();
+
+}
+
