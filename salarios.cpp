@@ -74,12 +74,25 @@ void Salarios::abrir()
 
     // Crear un objeto QFile
     QFile archivo(nombreArchivo);
+
+
     // Abrirlo para lectura
     if(archivo.open(QFile::ReadOnly)){
         // Crear un 'stream' de texto
         QTextStream entrada(&archivo);
         // Leer todo el contenido del archivo
-        QString datos = entrada.readAll();
+        QString datos = "", almacenarLinea = "";
+        while(entrada.atEnd()==false && almacenarLinea != "-----------------------------" ){
+            almacenarLinea = entrada.readLine();
+            datos += almacenarLinea + "\n";
+        }
+        ui->outBruto->setText(entrada.readLine());
+        m_salarioBruto = ui->outBruto->text().toDouble();
+        ui->outDescuento->setText(entrada.readLine());
+        m_descuento = ui->outDescuento->text().toDouble();
+        ui->outTotal->setText(entrada.readLine());
+        m_total = ui->outTotal->text().toDouble();
+
         // Cargar el contenido al área de texto
         ui->outResultado->clear();
         ui->outResultado->setPlainText(datos);
