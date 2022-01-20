@@ -45,6 +45,7 @@ private:
     double m_salarioNeto;
     double m_descuento;
 
+
     QString jornada2String();
 
 };

@@ -20,11 +20,15 @@ public:
     bool agregarObrero(QString nombre, int horas, TipoJornada jornada);
     bool calcularSalario();
     Obrero *obrero() const;
+    double salBruto;
+    double descuentoSalario;
+    double salNeto;
 
 signals:
 
 private:
     Obrero *m_obrero;
+
 
 };
 

@@ -43,5 +43,8 @@ private:
     void limpiar();
     void guardar();
     void abrir();
+    double m_salarioBruto;
+    double m_descuento;
+    double m_total;
 };
 #endif // SALARIOS_H

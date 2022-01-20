@@ -7,6 +7,9 @@ Salarios::Salarios(QWidget *parent)
 {
     ui->setupUi(this);
     m_controlador = new Controlador();
+    m_salarioBruto = 0;
+    m_descuento = 0;
+    m_total = 0;
 }
 
 Salarios::~Salarios()
@@ -26,6 +29,7 @@ void Salarios::limpiar()
     ui->inHoras->setValue(0);
     ui->inMatutino->setChecked(true);
     ui->inNombre->setFocus();
+
 }
 
 void Salarios::guardar()
@@ -44,6 +48,9 @@ void Salarios::guardar()
         QTextStream salida(&archivo);
         // Enviar los datos del resultado a la salida
         salida << ui->outResultado->toPlainText();
+        salida.operator<<("\n-----------------------------");
+        salida.operator<<("\n" + QString::number(m_salarioBruto,'f',2) + "\n" + QString::number(m_descuento,'f',2) + "\n"
++ QString::number(m_total,'f',2));
         // Mostrar 5 segundo que todo fue bien
         ui->statusbar->showMessage("Datos almacenados en " + nombreArchivo, 5000);
     }else {
@@ -92,6 +99,9 @@ void Salarios::abrir()
 void Salarios::on_actionCalcular_triggered()
 {
     calcular();
+
+    qDebug()<<m_salarioBruto;
+
 }
 
 void Salarios::calcular()
@@ -126,10 +136,17 @@ void Salarios::calcular()
     if (m_controlador->calcularSalario()){
         // muestra los resultados de los calculos del obrero
         ui->outResultado->appendPlainText(m_controlador->obrero()->toString());
-        // limpiar la interfaz
-        limpiar();
         // Mostrar mensaje por 5 segundos en la barra de estado
         ui->statusbar->showMessage("calculos procesados para " + nombre, 5000);
+        m_salarioBruto += m_controlador->salBruto;
+        m_descuento += m_controlador->descuentoSalario;
+        m_total += m_salarioBruto - m_descuento;
+        ui->outBruto->setText(QString::number(m_salarioBruto,'f',2));
+        ui->outDescuento->setText(QString::number(m_descuento,'f',2));
+        ui->outTotal->setText(QString::number(m_total,'f',2));
+
+        // limpiar la interfaz
+        limpiar();
     }else {
         QMessageBox::critical(
                     this,
@@ -142,6 +159,7 @@ void Salarios::calcular()
 void Salarios::on_actionGuardar_triggered()
 {
     guardar();
+
 }
 
 
@@ -149,6 +167,13 @@ void Salarios::on_actionNuevo_triggered()
 {
     limpiar();
     ui->outResultado->clear();
+    m_salarioBruto = 0;
+    m_descuento = 0;
+    m_total = 0;
+    ui->outBruto->setText("0.00");
+    ui->outDescuento->setText("0.00");
+    ui->outTotal->setText("0.00");
+
 }
 
 
